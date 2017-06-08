@@ -19,8 +19,10 @@ public interface CustomerServiceInterface {
 	 * @param fieldName
 	 * @param value
 	 * @return
+	 * @throws SecurityException 
+	 * @throws NoSuchFieldException 
 	 */
-	List<Customer> findByField(String fieldName, Object value);
+	List<Customer> findByField(String fieldName, Object value) throws NoSuchFieldException, SecurityException;
 
 	/**
 	 * Finds all customers who bought more than a given number of products.
